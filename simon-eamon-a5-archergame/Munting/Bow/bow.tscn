@@ -8,5 +8,3 @@
 position = Vector2(21, -48)
 sprite_frames = ExtResource("1_2p6wj")
 animation = &"BowDraw"
-frame = 1
-frame_progress = 0.752619

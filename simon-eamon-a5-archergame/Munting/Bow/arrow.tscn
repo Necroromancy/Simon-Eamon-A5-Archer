@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://128gx44llf2t"]
+
+[ext_resource type="Texture2D" uid="uid://bsge7g2fj1k04" path="res://Asset folder/Eamon 2d game assets/arrowsprite.png" id="1_nfxiu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bkhyj"]
+radius = 0.999999
+height = 4.0
+
+[node name="Arrow" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nfxiu")
+
+[node name="RigidArrow" type="RigidBody2D" parent="Sprite2D"]
+position = Vector2(17, 0)
+inertia = 1.0
+
+[node name="CollisionArrow" type="CollisionShape2D" parent="Sprite2D/RigidArrow"]
+position = Vector2(1, 0)
+rotation = -1.56945
+shape = SubResource("CapsuleShape2D_bkhyj")

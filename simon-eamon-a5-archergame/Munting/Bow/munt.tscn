@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://bc6yimap2uxxu"]
+
+[ext_resource type="Texture2D" uid="uid://bndow7jfy3svu" path="res://Asset folder/Eamon 2d game assets/ManyMunts.png" id="1_q1nvb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbe88"]
+atlas = ExtResource("1_q1nvb")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxhe3"]
+atlas = ExtResource("1_q1nvb")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1avt"]
+atlas = ExtResource("1_q1nvb")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga2v5"]
+atlas = ExtResource("1_q1nvb")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8m7s"]
+atlas = ExtResource("1_q1nvb")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xuvev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbe88")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxhe3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1avt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga2v5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8m7s")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[node name="Munt" type="Node2D"]
+
+[node name="Munt" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xuvev")
+animation = &"Idle"

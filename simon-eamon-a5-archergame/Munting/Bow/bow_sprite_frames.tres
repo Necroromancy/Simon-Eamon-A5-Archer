@@ -1,0 +1,45 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c2eplm3a2m48l"]
+
+[ext_resource type="Texture2D" uid="uid://fbci11yq2yn0" path="res://Asset folder/Eamon 2d game assets/BowDraw Full.png" id="1_n5lbn"]
+[ext_resource type="Texture2D" uid="uid://j3tvhyqgx53i" path="res://Asset folder/Eamon 2d game assets/BowNoArrow.png" id="2_pfwd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agfr6"]
+atlas = ExtResource("1_n5lbn")
+region = Rect2(84, 0, 42, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n062t"]
+atlas = ExtResource("1_n5lbn")
+region = Rect2(42, 0, 42, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxv8n"]
+atlas = ExtResource("1_n5lbn")
+region = Rect2(0, 0, 42, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ms1"]
+atlas = ExtResource("2_pfwd4")
+region = Rect2(0, 0, 27, 80)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agfr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n062t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxv8n")
+}],
+"loop": true,
+"name": &"BowDraw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ms1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

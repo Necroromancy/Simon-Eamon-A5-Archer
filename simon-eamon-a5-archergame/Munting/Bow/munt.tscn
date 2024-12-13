@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bc6yimap2uxxu"]
+[gd_scene load_steps=9 format=3 uid="uid://bc6yimap2uxxu"]
 
 [ext_resource type="Texture2D" uid="uid://bndow7jfy3svu" path="res://Asset folder/Eamon 2d game assets/ManyMunts.png" id="1_q1nvb"]
 
@@ -45,8 +45,17 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuvy1"]
+size = Vector2(20, 40)
+
 [node name="Munt" type="Node2D"]
 
 [node name="Munt" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xuvev")
 animation = &"Idle"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(18, 12)
+shape = SubResource("RectangleShape2D_wuvy1")

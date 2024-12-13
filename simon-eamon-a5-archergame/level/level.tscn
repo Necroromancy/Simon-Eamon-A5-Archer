@@ -1,53 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://xmxs3u4fhnkg"]
+[gd_scene load_steps=6 format=4 uid="uid://xmxs3u4fhnkg"]
 
 [ext_resource type="PackedScene" uid="uid://bfq1i3v3gtnlo" path="res://Munting/Bow/bow.tscn" id="1_bnb7u"]
 [ext_resource type="TileSet" uid="uid://cjl3hlv21k5vs" path="res://Asset folder/Eamon 2d game assets/Tiles_set.tres" id="1_es7c8"]
 [ext_resource type="PackedScene" uid="uid://128gx44llf2t" path="res://Munting/Bow/arrow.tscn" id="3_3ao35"]
 [ext_resource type="PackedScene" uid="uid://bc6yimap2uxxu" path="res://Munting/Bow/munt.tscn" id="4_qs4so"]
-[ext_resource type="Texture2D" uid="uid://bndow7jfy3svu" path="res://Asset folder/Eamon 2d game assets/ManyMunts.png" id="5_3h2ft"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gbe88"]
-atlas = ExtResource("5_3h2ft")
-region = Rect2(64, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pxhe3"]
-atlas = ExtResource("5_3h2ft")
-region = Rect2(128, 0, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m1avt"]
-atlas = ExtResource("5_3h2ft")
-region = Rect2(128, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ga2v5"]
-atlas = ExtResource("5_3h2ft")
-region = Rect2(64, 128, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8m7s"]
-atlas = ExtResource("5_3h2ft")
-region = Rect2(128, 128, 64, 64)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_f3dey"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gbe88")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pxhe3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m1avt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ga2v5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p8m7s")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 3.0
-}]
+[ext_resource type="Script" path="res://Munting/scripts/Munt.cs" id="5_4v85q"]
 
 [node name="2D archer_project" type="Node2D"]
 
@@ -66,8 +23,4 @@ position = Vector2(-105, -202)
 
 [node name="Munt" parent="." instance=ExtResource("4_qs4so")]
 position = Vector2(278, -78)
-
-[node name="Munt2" type="AnimatedSprite2D" parent="Munt"]
-position = Vector2(-112, -2)
-sprite_frames = SubResource("SpriteFrames_f3dey")
-animation = &"Idle"
+script = ExtResource("5_4v85q")

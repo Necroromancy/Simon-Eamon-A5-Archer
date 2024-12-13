@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://bndow7jfy3svu" path="res://Asset folder/Eamon 2d game assets/ManyMunts.png" id="1_q1nvb"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hlkv2"]
+radius = 6.0
+height = 36.0
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gbe88"]
 atlas = ExtResource("1_q1nvb")
 region = Rect2(64, 64, 64, 64)
@@ -45,17 +49,13 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuvy1"]
-size = Vector2(20, 40)
+[node name="Munt" type="CharacterBody2D"]
 
-[node name="Munt" type="Node2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 10)
+shape = SubResource("CapsuleShape2D_hlkv2")
 
 [node name="Munt" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xuvev")
 animation = &"Idle"
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(18, 12)
-shape = SubResource("RectangleShape2D_wuvy1")
+frame_progress = 0.198738
